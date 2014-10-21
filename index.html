@@ -21,7 +21,7 @@
 		   var chkstatus = $('input[name=all_chk]').is(":checked");
 
 		   if(chkstatus){
-			$('input[name^=agree]').prop('checked', true);
+			$('input[name^=agree]').prop('checked', true);//name 값이 agree로 시작하는 input
 		   }else{
 			$('input[name^=agree]').prop('checked', false);
 		   }

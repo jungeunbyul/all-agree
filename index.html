@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="" />
+<title>Document</title>
+</head>
+<body>
+<input type="checkbox" name="all_chk" id="" /><label for="">전체동의</label><br />
+
+<input type="checkbox" name="agree1" id="" /><label for="">개인정보동의</label><br />
+<input type="checkbox" name="agree2" id="" /><label for="">제3자 정보 제공 동의</label><br />
+<input type="checkbox" name="agree3" id="" /><label for="">약관 동의</label>
+
+<script type="text/javascript">
+	//전체 동의
+	jQuery(function($){
+		 $('input[name=all_chk]').click(function(){
+
+		   var chkstatus = $('input[name=all_chk]').is(":checked");
+
+		   if(chkstatus){
+			$('input[name^=agree]').prop('checked', true);
+		   }else{
+			$('input[name^=agree]').prop('checked', false);
+		   }
+		  });
+	});
+</script>
+
+</body>
+</html>
